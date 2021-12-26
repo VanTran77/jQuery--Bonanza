@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 1 - a jQuery Bonanza</title>
+</head>
+<body>
+    
+    <header id="container">
+        <h1>jQuery Bonanza</h1>
+    </header>
+
+    <div>
+        <button id="btnFadeOut">FadeOut</button>
+        <button id="btnFadeIn">FadeIn</button>
+        <button id="btnFadeTog">FadeToggle</button>
+        <button id="btnShow">Show</button>
+        <button id="btnHide">Hide</button>
+        <button id="btnTog">Toggle</button>
+        <button id="btnSlideDown">Slide Down</button>
+        <button id="btnSlideUp">Slide Up</button>
+        <p id="para1">History of fashion design refers specifically to the development of the purpose and intention behind garments, shoes and accessories, and their design and construction. The modern industry, based around firms or fashion houses run by individual designers, started in the 19th century with Charles Frederick Worth who, beginning in 1858, was the first designer to have his label sewn into the garments he created.</p>
+        <hr>
+        <br>
+    </div>
+    <div id="append">
+        <button id="appendPara">Append Paragraph</button>
+        <button id="appendHeading">Append Heading</button>
+        <button id="appendList">Append Item list</button>
+        <ul id="itemList"></ul>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <button id="changeColor">Change color</button>
+    <p id="para2">History of fashion design refers specifically to the development of the purpose and intention behind garments, shoes and accessories, and their design and construction. The modern industry, based around firms or fashion houses run by individual designers, started in the 19th century with Charles Frederick Worth who, beginning in 1858, was the first designer to have his label sewn into the garments he created.</p>
+    <script>
+         $(document).ready(function(){
+
+            $('#btnFadeOut').on('click', function(){
+                $('#para1').fadeOut(3000);
+            });
+            $('#btnFadeIn').on('click', function(){
+                $('#para1').fadeIn(3000);
+            });
+            $('#btnFadeTog').on('click', function(){
+                $('#para1').fadeToggle(3000);
+            });
+            
+            $('#btnShow').on('click', function(){
+                $('#para1').show();
+            });
+            $('#btnHide').on('click', function(){
+                $('#para1').hide();
+            });
+            $('#btnTog').on('click', function(){
+                $('#para1').toggle();
+            });
+            $('#btnSlideDown').on('click', function(){
+                $('#para1').slideDown(3000);
+            });
+            $('#btnSlideUp').on('click', function(){
+                $('#para1').slideUp(3000);
+            });
+
+            $('#appendPara').on('click', function(){
+                $('#append').append('<p>History of fashion design refers specifically to the development of the purpose and intention behind garments, shoes and accessories, and their design and construction. The modern industry, based around firms or fashion houses run by individual designers, started in the 19th century with Charles Frederick Worth who, beginning in 1858, was the first designer to have his label sewn into the garments he created.</p>')
+            });
+            $('#appendHeading').on('click', function(){
+                $('#append').append('<h3>Heading is h3</h3>')
+            });
+            $('#appendList').on('click', function(){
+                $('#itemList').append('<li>Item list 1</li>')
+            });
+
+            $('#changeColor').on('click', function(){
+                $('#para2').css('color', 'red');
+            });
+
+         })
+
+    </script>
+</body>
+</html>
