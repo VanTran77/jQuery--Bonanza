@@ -18,11 +18,11 @@
         <button id="btnFadeOut">FadeOut</button>
         <button id="btnFadeIn">FadeIn</button>
         <button id="btnFadeTog">FadeToggle</button>
-        <button id="btnShow">Show</button>
         <button id="btnHide">Hide</button>
+        <button id="btnShow">Show</button>
         <button id="btnTog">Toggle</button>
-        <button id="btnSlideDown">Slide Down</button>
         <button id="btnSlideUp">Slide Up</button>
+        <button id="btnSlideDown">Slide Down</button>
         <p id="para1">History of fashion design refers specifically to the development of the purpose and intention behind garments, shoes and accessories, and their design and construction. The modern industry, based around firms or fashion houses run by individual designers, started in the 19th century with Charles Frederick Worth who, beginning in 1858, was the first designer to have his label sewn into the garments he created.</p>
         <hr>
         <br>
@@ -31,6 +31,7 @@
         <button id="appendPara">Append Paragraph</button>
         <button id="appendHeading">Append Heading</button>
         <button id="appendList">Append Item list</button>
+        <p>History of fashion design refers specifically to the development of the purpose and intention behind garments</p>
         <ul id="itemList"></ul>
     </div>
     <br>
@@ -60,11 +61,12 @@
             $('#btnTog').on('click', function(){
                 $('#para1').toggle();
             });
-            $('#btnSlideDown').on('click', function(){
-                $('#para1').slideDown(3000);
-            });
+
             $('#btnSlideUp').on('click', function(){
                 $('#para1').slideUp(3000);
+            });
+            $('#btnSlideDown').on('click', function(){
+                $('#para1').slideDown(3000);
             });
 
             $('#appendPara').on('click', function(){
@@ -81,7 +83,7 @@
                 $('#para2').css('color', 'red');
             });
 
-         })
+         });
 
     </script>
 </body>
